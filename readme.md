@@ -88,13 +88,6 @@
         <td>Exam rubric, Project with logreg, 1:n, m:n</td>
         <td> </td>
     </tr>
-    <tr>
-        <td> </td>
-        <td></td>
-        <td></td>
-        <td> </td>
-        <td> </td>
-    </tr>
     </tbody>
 </table>
 
