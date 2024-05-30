@@ -48,14 +48,14 @@
     <tr>
         <td>W2D1 </td>
         <td>4</td>
-        <td>ORM Query</td>
+        <td>ORM - Query</td>
         <td>Linq (Language Integrated Query)</td>
         <td></td>
     </tr>
     <tr>
         <td>W2D2 </td>
         <td></td>
-        <td>ORM CRUD </td>
+        <td>ORM - CRUD </td>
         <td>CRUD with MySQL using Linq</td>
         <td>
         </td>
