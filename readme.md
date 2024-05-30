@@ -15,7 +15,7 @@
         <td>1</td>
         <td>C# Fundamentals</td>
         <td>Fundamentals </td>
-        <td></td>
+        <td> </td>
     </tr>
     <tr>
         <td>W1D2 </td>
@@ -23,7 +23,7 @@
         <td>C# OOP</td>
         <td>Class, Properties, Inheritance, Interfaces 
         </td>
- <td> </td>
+        <td> </td>
     <tr>
         <td>W1D3 </td>
         <td>3</td>
@@ -83,7 +83,7 @@
     </tr>
     <tr>
         <td> W3D1 </td>
-        <td></td>
+        <td>5 </td>
         <td>Belt Prep</td>
         <td>Exam rubric, Project with logreg, 1:n, m:n</td>
         <td> </td>
