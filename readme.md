@@ -92,7 +92,7 @@
 </table>
 
 ## Creating snippets
-1. Copy the code to create snippets - [Ref](https://snippet-generator.app/?description=&tabtrigger=&snippet=&mode=vscode)
+1. Copy the code to create snippets - [Snippet-generator](https://snippet-generator.app/?description=&tabtrigger=&snippet=&mode=vscode)
 2. VS Code --> View --> Command Palette --> Snippet: Configure User Snippets --> FileExtension.json
 3. Update the title & prefix to use the snippet
 
