@@ -97,38 +97,6 @@
 3. Update the title & prefix to use the snippet
 
 
-## keyboard shortcut and useful terminal command
-<table>
-<thead>
-    <tr>
-        <th></th>
-        <th>Windows</th>
-        <th>Mac </th>
-    </tr>
-</thead>
-<tbody>
-    <tr>
-        <td> Stop the server from running </td>
-        <td > Ctrl + C </td>
-        <td > Ctrl + C </td>
-    </tr>
-    <tr>
-        <td> Direct into the folder </td>
-        <td colspan="2"> cd folder_name </td>
-    </tr>
-    <tr>
-        <td>  </td>
-        <td colspan="2"> Type "cd ", then drag the folder to the terminal </td>
-    </tr>
-    <tr>
-        <td> Remove a directory and contents </td>
-        <td colspan="2"> rm -rf folder_name </td>
-    </tr>
-</tbody>
-</table>
-
-
-
 ## Dotnet Command cheatsheet
 - To cd into the folder
   - Type ```cd ```, then drag the folder to the terminal
