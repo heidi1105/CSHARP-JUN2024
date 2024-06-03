@@ -1,4 +1,9 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿// 1. Create the folder
+// 2. open terminal in that folder
+// 3. dotnet new console
+
+// 1. dotnet new console -o FundamentalDemo
+// See https://aka.ms/new-console-template for more information
 Console.WriteLine("Hello, World!");
 
 /* 1. Variables 
@@ -84,7 +89,7 @@ List<string> mySkills = ["Flask", "React"];
 mySkills.Add("Bootstrap");
 mySkills.Add("Tailwind");
 
-for(int i = 0; i< mySkills.Count; i++)
+for(int i = 0; i < mySkills.Count; i++)
 {
     Console.WriteLine($"{i} : {mySkills[i]}");
 }
@@ -105,3 +110,45 @@ foreach(KeyValuePair<string,string> entry in profile)
 {
     Console.WriteLine($"{entry.Key} - {entry.Value}");
 }
+
+static void Greeting(string name = "Anonymous")
+{
+    Console.WriteLine($"Hi, {name}");
+}
+
+static string GreetMessage()
+{
+    return "Hi from GreetMessage";
+}
+
+Greeting();
+Greeting("Pepper"); // print out "hi"
+
+
+//GreetMessage(); // return a string
+Console.WriteLine(GreetMessage());
+
+
+Console.WriteLine("What is your name?");
+string nameInput = Console.ReadLine();
+Greeting(nameInput);
+
+
+Console.WriteLine("Type a number, then hit enter: ");
+string NumberInput = Console.ReadLine(); // returning a string
+int converted = Convert.ToInt32(NumberInput);
+Console.WriteLine(10 + converted);
+
+
+
+// Implicit Casting - no lossy conversion
+int intNum = 8; // 8
+double intNumToDouble = intNum; // 8.0
+
+Console.WriteLine(intNumToDouble);
+
+
+// Explict casting - with lossy conversion
+double doubleNum = 1.99; // 1.99
+int doubleNumToInt = (int) doubleNum; // 1
+Console.WriteLine(doubleNumToInt);
