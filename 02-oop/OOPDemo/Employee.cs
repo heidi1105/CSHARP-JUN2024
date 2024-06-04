@@ -1,6 +1,7 @@
 public class Employee
 {
     // ----------- 1. Attributes, Fields, Properties ------------
+
     private string _name;     // private field : _camelCase
     public string Name // property : PascalCase
     {
@@ -33,11 +34,19 @@ public class Employee
     }
 
     // ----------- 3. Methods ------------
-    public void ShowStatus()
+    public virtual void ShowStatus() // to be overrided 
     {
         Console.WriteLine("=========Status=========");
         Console.WriteLine($"Name : {Name}");
         Console.WriteLine($"Role : {Role}");
         Console.WriteLine($"Email : {Email}");
+        Console.WriteLine($"BrainCell : {BrainCell}");
+    }
+
+    public void Teach(Employee targetStaff)
+    {
+        Console.WriteLine($"{Name} is teaching {targetStaff.Name}");
+        BrainCell += 2;
+        targetStaff.BrainCell += 1;
     }
 }
