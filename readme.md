@@ -1,4 +1,4 @@
-# Welcome to the JAVA stack with Heidi
+# Welcome to the C# stack with Heidi
 
 ## Schedule 
 <table>
