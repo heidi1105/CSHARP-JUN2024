@@ -109,4 +109,6 @@
 - Console application:
   - ``` dotnet new console ``` if you are inside the folder
   - ``` dotnet new console -o ProjectName ``` To also create the project folder
-
+- Web Application without MVC structure
+  - ``` dotnet new web --no-https ``` (inside the folder)
+  - ``` dotnet new web --no-https -o ProjectName ``` (To create the folder)
