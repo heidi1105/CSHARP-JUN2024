@@ -15,7 +15,7 @@
         <td>1</td>
         <td>C# Fundamentals</td>
         <td>Fundamentals </td>
-        <td> </td>
+        <td><a href="./01-fundamentals/FundamentalDemo/">Code </a></td>
     </tr>
     <tr>
         <td>W1D2 </td>
@@ -23,7 +23,7 @@
         <td>C# OOP</td>
         <td>Class, Properties, Inheritance, Interfaces 
         </td>
-        <td> </td>
+        <td> <a href="./02-oop/OOPDemo/">Code </a></td>
     <tr>
         <td>W1D3 </td>
         <td>3</td>
