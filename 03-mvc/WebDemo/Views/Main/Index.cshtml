@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Hello!</title>
+        <link rel="stylesheet" href="~/css/style.css" />
+    </head>
+    <body>
+        <h1>Hello, I am @ViewBag.Name. I am @ViewBag.Age years old</h1>
+        <img class="avatar" src="~/images/selfie.jpg" alt="Pepper" />
+        
+        
+        <ul>
+        @{
+            // Define the variable within the cshtml
+            List<string> SkillList = ["HTML", "CSS", "Python", "JS", "C#"];
+            foreach(string skill in SkillList)
+            {
+                if(skill.Contains("h"))
+                {
+                    <li style="text-decoration: line-through;">@skill</li>
+                }
+                else
+                {
+                    <li>@skill</li>
+                }
+            }
+        }
+
+
+        @foreach(string skill in ViewBag.AllSkills)
+            {
+                // Use the variable passed from the controller ViewBag
+                if(skill.Contains("h"))
+                {
+                    <li style="text-decoration: line-through;">@skill</li>
+                }
+                else
+                {
+                    <li>@skill</li>
+                }
+            }
+        
+        </ul>
+
+    </body>
+</html>
+
