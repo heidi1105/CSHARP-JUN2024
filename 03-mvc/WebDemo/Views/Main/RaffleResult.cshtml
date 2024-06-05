@@ -18,7 +18,18 @@
                 <a href="/raffle/entry">Enter the raffle!</a>
             </p>
         </div>
-        <h1>Your lucky number is...@ViewBag.Num</h1>
+        <h1>Raffle Result</h1>
+        <h3>Name: @ViewBag.FullName</h3>
+        <h3>Horoscope: @ViewBag.Horoscope</h3>
+        <p>Introuction: @ViewBag.Introduction</p>
+        @if(ViewBag.Winning > 0.5)
+        {
+            <h1>You win!</h1>
+        }
+        else
+        {
+            <h1>You lose....</h1>
+        }
     </body>
 </html>
 

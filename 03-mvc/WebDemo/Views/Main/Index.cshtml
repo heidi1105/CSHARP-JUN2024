@@ -1,3 +1,7 @@
+@{
+    int LuckyNum = new Random().Next(1, 20);
+}
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -6,10 +10,19 @@
         <link rel="stylesheet" href="~/css/style.css" />
     </head>
     <body>
+        <div>
+            <p>
+                <a href="/">Home</a> | 
+                <a href="/lucky/@LuckyNum">Lucky Number</a> | 
+                <a href="/trymyluck">Try my luck!</a> |
+                <a href="/tryagain">Try Again</a> | 
+                <a href="/raffle/entry">Enter the raffle!</a>
+            </p>
+        </div>
         <h1>Hello, I am @ViewBag.Name. I am @ViewBag.Age years old</h1>
         <img class="avatar" src="~/images/selfie.jpg" alt="Pepper" />
         
-        
+        <h3>Creating variables in cshtml</h3>
         <ul>
         @{
             // Define the variable within the cshtml
@@ -26,21 +39,14 @@
                 }
             }
         }
+        </ul>
 
-
+        <h3>Using ViewBag variable from Controller</h3>
+        <ul>
         @foreach(string skill in ViewBag.AllSkills)
             {
-                // Use the variable passed from the controller ViewBag
-                if(skill.Contains("h"))
-                {
-                    <li style="text-decoration: line-through;">@skill</li>
-                }
-                else
-                {
                     <li>@skill</li>
-                }
             }
-        
         </ul>
 
     </body>

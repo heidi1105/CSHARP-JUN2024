@@ -1,0 +1,48 @@
+@{
+    int LuckyNum = new Random().Next(1, 20);
+}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Hello!</title>
+    </head>
+    <body>
+        <div>
+            <p>
+                <a href="/">Home</a> | 
+                <a href="/lucky/@LuckyNum">Lucky Number</a> | 
+                <a href="/trymyluck">Try my luck!</a> |
+                <a href="/tryagain">Try Again</a> | 
+                <a href="/raffle/entry">Enter the raffle!</a>
+            </p>
+        </div>
+        <div>
+            <h1>Enter the raffle by submitting the form</h1>
+            <form action="/raffle/process" method="post">
+                <p>
+                    <label>Full Name</label>
+                    <input type="text" name="fullName"/>
+                </p>
+                <p>
+                    <label>Horoscope</label>
+                    <select name="horoscope">
+                        @foreach(string horo in ViewBag.AllHoros)
+                        {
+                            <option value="@horo">@horo</option>
+                        }
+                    </select>
+                </p>
+                <p>
+                    <label>Introduction</label>
+                    <textarea name="introduction"></textarea>
+                </p>
+                <button type="submit">Submit</button>
+
+            </form>
+
+        </div>
+    </body>
+</html>
+
