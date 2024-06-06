@@ -1,0 +1,41 @@
+@{
+    ViewData["Title"] = "Raffle Entry";
+}
+
+@model Entry
+
+<h1>Enter the raffle by submitting the form</h1>
+<form asp-action="RaffleResult" asp-controller="Home" method="post">
+    <div>
+        <label asp-for="FullName"></label>
+        <input asp-for="FullName" class="form-control"/>
+        <span asp-validation-for="FullName" class="text-danger"></span>
+    </div>
+
+    <div>
+        <label asp-for="Age"></label>
+        <input asp-for="Age" class="form-control"/>
+        <span asp-validation-for="Age" class="text-danger"></span>
+    </div>
+
+    <div>
+        <label asp-for="Horoscope"></label>
+        <select asp-for="Horoscope" class="form-select">
+            @foreach(string horo in ViewBag.AllHoros)
+            {
+                <option value="@horo">@horo</option>
+            }
+        </select>
+        <span asp-validation-for="Horoscope" class="text-danger"></span>
+    </div>
+
+    <div>
+        <label asp-for="Introduction"></label>
+        <textarea asp-for="Introduction" class="form-control"></textarea>
+        <span asp-validation-for="Introduction" class="text-danger"></span>
+    </div>
+
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+

@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "MVC Demo";
+}
+
+@model List<Skill>
+
+<div>
+    <h1 class="display-4">Welcome to my page</h1>
+    <ul>
+        @foreach(Skill skill in Model)
+        {
+            <li>@skill.Language - @skill.Rating</li>
+        }
+    </ul>
+  
+  
+</div>
