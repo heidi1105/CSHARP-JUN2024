@@ -4,6 +4,8 @@ using MVCDemo.Models;
 
 namespace MVCDemo.Controllers;
 
+
+
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
@@ -30,7 +32,8 @@ public class HomeController : Controller
     [HttpGet("lucky/{num}")]
     public ViewResult LuckyPage(int num)
     {
-        return View(num);
+        // return View(num);
+        return View("LuckyPage", num);
     }
 
     [HttpGet("raffle/entry")]
@@ -44,6 +47,16 @@ public class HomeController : Controller
     [HttpPost("raffle/process")] // matching the form action
     public ViewResult RaffleResult(Entry newEntry) // Set all the input value into newEntry according to the Model
     {   
+        // To console out all the errors
+        if (!ModelState.IsValid)
+        {
+           var message = string.Join(" | ", ModelState.Values
+           .SelectMany(v => v.Errors)
+           .Select(e => e.ErrorMessage));
+           Console.WriteLine(message);
+         }
+
+
         if(!ModelState.IsValid) // Opposite to the platform, if it is NOT valid
         {
             List<string> allHoros = ["Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo", "Libra", "Scorpio", "Sagittarius", "Aquarius", "Pisces"];
@@ -54,8 +67,6 @@ public class HomeController : Controller
         {
             return View(newEntry); // Show the result
         }
-
-
     }
 
 
