@@ -29,21 +29,21 @@
         <td>3</td>
         <td> .NET web</td>
         <td> Routing, Razor, Forms</td>
-        <td> </td>
+        <td><a href="./03-mvc/WebDemo/">Code </a></td>
     </tr>
         <tr>
         <td>W1D4 </td>
         <td></td>
         <td>.NET MVC</td>
         <td>Models, ViewModels & Forms, Validations</td>
-        <td></td>
+        <td><a href="./03-mvc/MVCDemo/">Code </a></td>
     </tr>
     <tr>
         <td>W1D5 </td>
         <td></td>
         <td></td>
         <td>Sessions </td>
-        <td></td>
+        <td><a href="./03-mvc/MVCDemo/">Code </a></td>
     </tr>
     <tr>
         <td>W2D1 </td>
