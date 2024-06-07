@@ -1,0 +1,10 @@
+@{
+    ViewData["Title"] = "Count Page";
+    int Count = Context.Session.GetInt32("Count") ?? 0;
+}
+
+<h1>Welcome! You have visited this page for @Count times</h1>
+
+<form asp-action="ClearSession" asp-controller="Home" method="Post">
+    <button class="btn btn-danger">Reset session</button>
+</form>

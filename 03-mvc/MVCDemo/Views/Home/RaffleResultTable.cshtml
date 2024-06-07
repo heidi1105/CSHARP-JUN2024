@@ -1,0 +1,21 @@
+@model List<Entry>
+
+<h1>All Raffle Entries</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name (Age)</th>
+            <th>Horoscope</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(Entry entry in Model)
+        {
+            <tr>
+                <td>@entry.FullName (@entry.Age)</td>
+                <td>@entry.Horoscope</td>
+            </tr>
+        }
+    </tbody>
+</table>

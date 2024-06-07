@@ -5,7 +5,7 @@
 @model Entry
 
 <h1>Enter the raffle by submitting the form</h1>
-<form asp-action="RaffleResult" asp-controller="Home" method="post">
+<form asp-action="RaffleProcess" asp-controller="Home" method="post">
     <div>
         <label asp-for="FullName"></label>
         <input asp-for="FullName" class="form-control"/>
@@ -20,7 +20,7 @@
 
     <div>
         <label asp-for="Horoscope"></label>
-        <select asp-for="Horoscope" class="form-select">
+        <select asp-for="Horoscope" class="form-select" >
             @foreach(string horo in ViewBag.AllHoros)
             {
                 <option value="@horo">@horo</option>

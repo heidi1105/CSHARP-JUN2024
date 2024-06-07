@@ -6,6 +6,9 @@
 
 <div>
     <h1 class="display-4">Welcome to my page</h1>
+    
+    <h1>You have visited this page for @Context.Session.GetInt32("Count") times</h1>
+    <h4>Last Raffle Entry: @Context.Session.GetString("Name")</h4>
     <ul>
         @foreach(Skill skill in Model)
         {
