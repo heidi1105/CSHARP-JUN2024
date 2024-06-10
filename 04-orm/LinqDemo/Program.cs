@@ -16,7 +16,7 @@ List<Item> Items = new()
 
 
 // 1. Getting a single result based on criteria
-Item milk = Items.First(item => item.Name == "Milk");
+Item milk = Items.First(item => item.Name == "Milk"); // Throw an exception if they cannot find a matching item
 Console.WriteLine(milk);
 
 Item? almondMilk = Items.FirstOrDefault(item => item.Name == "Almond Milk"); 
@@ -29,7 +29,7 @@ Console.WriteLine("=======================================");
 
 // 2. Getting multiple results based on criteria
 List<Item> affordableExpiredItems = Items
-                                    .Where(item=> item.Price < 10 & item.ExpiryDate < DateTime.Today)
+                                    .Where(item=> item.Price < 10 & item.ExpiryDate < DateTime.Today) // enumerable 
                                     .ToList();
 affordableExpiredItems.ForEach(Console.WriteLine);
 Console.WriteLine("=======================================");
@@ -64,11 +64,13 @@ Console.WriteLine(minPrice);
 
 // 6. Logical testing
 // If any of the items free?
-bool anyFreeItem = Items.Any(item => item.Price == 0);
+bool anyFreeItem = Items.Any(item => item.Price == 0); 
+// if any of the condition is true, return true
 Console.WriteLine(anyFreeItem);
 
 // Does all items not expired?
-bool allNotExpired = Items.All(item=> item.ExpiryDate > DateTime.Today);
+bool allNotExpired = Items.All(item=> item.ExpiryDate > DateTime.Today); 
+// only return true if ALL the items match the condition
 Console.WriteLine(allNotExpired);
 
 
@@ -97,5 +99,15 @@ List<Order> Orders = new()
 
 // 7. nested queries
 // Return the list of Dairy Free order
+List<Order> dairyFreeOrders = Orders
+                                .Where(order => order.Flavors
+                                    .All(flavor => !flavor.IsDairy))
+                                .ToList();
+dairyFreeOrders.ForEach(Console.WriteLine);
 
 // Return a list of dairy Free order with 3 flavors
+List<Order> dairyFreeThreeFlavor = Orders
+                                .Where(order => order.Flavors.Count == 3 && 
+                                    order.Flavors.All(flavor => !flavor.IsDairy))
+                                .ToList();
+dairyFreeThreeFlavor.ForEach(Console.WriteLine);
