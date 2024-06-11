@@ -23,7 +23,7 @@
   | public class MyContext : DbContext | MyContext class represents a session with our MySQL database, allowing us to query for or save data | 
   |: DbContext | DbContext is a class that comes from EntityFramework to inherit |
   | public MyContext(DbContextOptions options) : base(options) { } | constructs our context upon initialization | 
-  | public DbSet<Monster>   | every model in our project that is making a table, DBSet is Inumerable that allows Linq| 
+  | public DbSet<Monster>   | every model in our project that is making a table, DBSet is Enumerable that allows Linq| 
   | public DbSet<Monster> ``` Monsters```  | table name -- plural for mySQL convention , Pascal for C# convention| 
 
 
