@@ -112,3 +112,10 @@
 - Web Application without MVC structure
   - ``` dotnet new web --no-https ``` (inside the folder)
   - ``` dotnet new web --no-https -o ProjectName ``` (To create the folder)
+- Web Application with MVC structure
+  - ``` dotnet new mvc --no-https ``` (inside the folder)
+  - ``` dotnet new mvc --no-https -o ProjectName ``` (To create the folder)
+- Adding DB migrations
+  - ``` dotnet ef migrations add MigrationName ``` (Migration name cannot be repeated, could add -v to enable verbose to see the details if it fails)
+  - ```dotnet ef database update``` (To update DB)
+  - ```rm -rf Migrations ``` To remove all the migrations
