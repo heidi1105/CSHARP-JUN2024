@@ -17,14 +17,14 @@
         // Need to add this after Model is created
     }
   ```
-| Code | Usage |
-| -- | ---- |
-| #pragma warning disable CS8618 | We can disable our warnings safely because we know the framework will assign non-null values when it constructs this class for us. |
-| public class MyContext : DbContext | MyContext class represents a session with our MySQL database, allowing us to query for or save data | 
-|: DbContext | DbContext is a class that comes from EntityFramework to inherit |
-| public MyContext(DbContextOptions options) : base(options) { } | constructs our context upon initialization | 
-| public DbSet<Monster>   | every model in our project that is making a table, DBSet is Inumerable that allows Linq| 
-| public DbSet<Monster> ``` Monsters```  | table name -- plural for mySQL convention , Pascal for C# convention| 
+  | Code | Usage |
+  | -- | ---- |
+  | #pragma warning disable CS8618 | We can disable our warnings safely because we know the framework will assign non-null values when it constructs this class for us. |
+  | public class MyContext : DbContext | MyContext class represents a session with our MySQL database, allowing us to query for or save data | 
+  |: DbContext | DbContext is a class that comes from EntityFramework to inherit |
+  | public MyContext(DbContextOptions options) : base(options) { } | constructs our context upon initialization | 
+  | public DbSet<Monster>   | every model in our project that is making a table, DBSet is Inumerable that allows Linq| 
+  | public DbSet<Monster> ``` Monsters```  | table name -- plural for mySQL convention , Pascal for C# convention| 
 
 
 - Add the context in the builder service (in Program.cs)
