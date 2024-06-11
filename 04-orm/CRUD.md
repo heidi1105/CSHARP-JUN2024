@@ -3,7 +3,7 @@
 ## 1. Project setup
 - Add the 2 packages (MySQL & efCore design)
   - NamingConvention package is optional
-- Add the connection string in appsettings.json
+- Add the connection string in appsettings.json (Follow the platform and update your password & db)
 - Create Context file (Name must end with Context)
   ```cs
     namespace CRUDDemo.Models; // Add the correct namespace
@@ -16,7 +16,7 @@
         // Need to add this after Model is created
     }
   ```
-- Add the context in the builder service
+- Add the context in the builder service (in Program.cs)
     ```cs
     // The following must be before builder.build()
     var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
