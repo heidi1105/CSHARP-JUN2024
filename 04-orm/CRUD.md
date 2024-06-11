@@ -32,34 +32,40 @@
 ## 2. Models & DB
 - Add Model & Add the DbSet on Context file as well
   ```cs
-    [Key]
-    public int Id{get; set;} // Can call it TripId as well as long as it is called Id at the end
+    // Add namespace & using packages
 
-    [Required]
-    [MinLength(3, ErrorMessage ="Location must be at least 3 characters long")]
-    [Column(TypeName ="VARCHAR(255)")] // To specify Datatype in SQL
-    public string Location{get; set;}
+    public class Trip
+    {
+        [Key] // To specify Primary key
+        public int Id{get; set;} // Can call it TripId as well as long as it is called Id at the end
 
-    [Required]
-    [MaxLength(255)] // MaxLength can make it VARCHAR as well
-    [Display(Name ="Image URL")]
-    public string ImageUrl{get; set;}
+        [Required]
+        [MinLength(3, ErrorMessage ="Location must be at least 3 characters long")]
+        [Column(TypeName ="VARCHAR(255)")] // To specify Datatype in SQL
+        public string Location{get; set;}
 
-    public string Description{get; set;}
+        [Required]
+        [MaxLength(255)] // MaxLength can make it VARCHAR as well
+        [Display(Name ="Image URL")]
+        public string ImageUrl{get; set;}
 
-    [DataType(DataType.Date)] // To display the form as Date
-    [Display(Name ="Start Date")] // To update the label
-    public DateOnly StartDate{get; set;}
+        public string Description{get; set;}
 
-    [Required]
-    [Display(Name ="Length of the trip")]
-    public int? TripLength{get; set;}
+        [DataType(DataType.Date)] // To display the form as Date
+        [Display(Name ="Start Date")] // To update the label
+        public DateOnly StartDate{get; set;}
 
-    [DefaultValue(false)]
-    public bool IsConfirmed{get; set;}
+        [Required]
+        [Display(Name ="Length of the trip")]
+        public int? TripLength{get; set;}
 
-    public DateTime CreatedAt { get; set; } = DateTime.Now;
-    public DateTime UpdatedAt { get; set; } = DateTime.Now;
+        [DefaultValue(false)]
+        public bool IsConfirmed{get; set;}
+
+        public DateTime CreatedAt { get; set; } = DateTime.Now;
+        public DateTime UpdatedAt { get; set; } = DateTime.Now;
+    }
+    
   ``` 
 
     ```s
