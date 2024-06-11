@@ -154,7 +154,11 @@
   - Action will be the same as Details
   - cshtml will be the same as CreateForm except for the asp-action and need to add the asp-route-id
 - Process edit:
-  - Same as CreateProcess but need to add the path (id) if needed
+  - When the form is invalid, make sure the updatedTrip include the Id ``` updatedTrip.Id = tripId ```
+  - And ``` return View("EditForm", updatedTrip); ```
+  - When the form is valid, update the trip from DB for each attribute and save it
+  - If you want to redirect to Details, make sure you add the route. 
+    ``` return RedirectToAction("DetailsPage", new {tripId = tripId}); ```
 
 ### 3.5 Delete
 - Create the form to make it a post route
