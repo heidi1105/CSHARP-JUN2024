@@ -65,7 +65,7 @@
         <td></td>
         <td></td>
         <td>Partials, LogReg </td>
-        <td></td>
+        <td><a href="./04-orm/LogReg.md">Notes </td>
     </tr>
     <tr>
         <td> W2D4 </td>

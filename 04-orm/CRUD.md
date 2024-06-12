@@ -2,7 +2,6 @@
 
 ## 1. Project setup
 - Add the 2 packages (MySQL & efCore design)
-  - 
   - [NamingConvention](https://www.nuget.org/packages/EFCore.NamingConventions) package is optional
 - Add the connection string in appsettings.json (Follow the platform and update your password & db)
 - Create Context file (Name must end with Context)
