@@ -65,14 +65,14 @@
         <td></td>
         <td></td>
         <td>Partials, LogReg </td>
-        <td><a href="./04-orm/LogReg.md">Notes </td>
+        <td><a href="./04-orm/LogReg.md">Notes </a></td>
     </tr>
     <tr>
         <td> W2D4 </td>
         <td></td>
         <td>ORM - Relationships</td>
         <td>One-to-many, Linq to join tables</td>
-        <td></td>
+        <td><a href="./05-belt-review/OneToMany.md">Notes </a></td>
     </tr>
     <tr>
         <td> W2D5 </td>
