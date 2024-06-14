@@ -33,8 +33,8 @@
 ``` .Sum(item => item.price) ```
   - To get the sum of all the item price
 
-### HINT on Create Itin / Comments on a details page
-#### For successful submission
+3. HINT on Create Itin / Comments on a details page
+### For successful submission
 - If you need to Redirect back to the Details page, it may require the Path variable and you will need to put it in argument as well. 
 
 ```cs
@@ -49,7 +49,7 @@
       return RedirectToAction("TripDetailsPage", new {tripId = newItin.TripId});
     }
 ```
-#### For Invalid submission
+### For Invalid submission
 ```cs
     [HttpPost("trips/itins/new")]
     public IActionResult NewItinProcess(UserTripItin newItin)
@@ -65,3 +65,5 @@
         // Success submission logic to be filled by you
     }
 ```
+### When handling the query to display all the itin, consider the ERD
+![alt text](image.png)
