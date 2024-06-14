@@ -79,7 +79,7 @@
         <td></td>
         <td></td>
         <td>Many-to-many</td>
-        <td></td>
+        <td><a href="./05-belt-review/ManyToMany.md">Notes </a></td>
     </tr>
     <tr>
         <td> W3D1 </td>
