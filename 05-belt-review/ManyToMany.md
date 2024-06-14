@@ -1,4 +1,4 @@
-# Notes on OneToMany
+# Notes on ManyToMany
 
 ## 1. Project setup
 ### Suggestions: Do not start until you got the 1:n working
