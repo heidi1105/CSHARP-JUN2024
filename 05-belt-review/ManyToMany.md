@@ -26,8 +26,9 @@
 ![alt text](image-1.png)
 
 ### HINT on queries
-  ```.Any(item => item.price > 10 )``` 
+```.Any(item => item.price > 10 )``` 
   - to find if any item in the list fits the criteria 
   - Could be very helpful in checking if the user liked the item
-  ``` .Sum(item => item.price) ```
+  
+``` .Sum(item => item.price) ```
   - To get the sum of all the item price
