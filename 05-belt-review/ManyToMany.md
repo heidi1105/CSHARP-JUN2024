@@ -32,3 +32,36 @@
   
 ``` .Sum(item => item.price) ```
   - To get the sum of all the item price
+
+### HINT on Create Itin / Comments on a details page
+#### For successful submission
+- If you need to Redirect back to the Details page, it may require the Path variable and you will need to put it in argument as well. 
+
+```cs
+    [HttpGet("trips/{tripId}")]
+    public IActionResult TripDetailsPage(int tripId)
+    {} // DetailsPage require tripId in the path
+
+    [HttpPost("trips/itins/new")]
+    public IActionResult NewItinProcess(UserTripItin newItin)
+    {
+      // If the form is valid: provide tripId 
+      return RedirectToAction("TripDetailsPage", new {tripId = newItin.TripId});
+    }
+```
+#### For Invalid submission
+```cs
+    [HttpPost("trips/itins/new")]
+    public IActionResult NewItinProcess(UserTripItin newItin)
+    {
+        if(!ModelState.IsValid)
+        {
+          // Make sure you include the query required in DetailsPage
+          Trip? trip = _context.Trips.________ // Fill in the necessary query
+
+          // And include it when returning the View
+          return View("TripDetailsPage", trip); 
+        }
+        // Success submission logic to be filled by you
+    }
+```
