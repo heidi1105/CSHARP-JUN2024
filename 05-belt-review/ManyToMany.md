@@ -1,4 +1,14 @@
 # Notes on ManyToMany
+- [Notes on ManyToMany](#notes-on-manytomany)
+  - [1. Project setup](#1-project-setup)
+    - [Suggestions: Do not start until you got the 1:n working](#suggestions-do-not-start-until-you-got-the-1n-working)
+  - [2. Example query](#2-example-query)
+    - [HINT on queries](#hint-on-queries)
+  - [3. HINT on Create Itin / Comments on a details page](#3-hint-on-create-itin--comments-on-a-details-page)
+    - [For successful submission](#for-successful-submission)
+    - [For Invalid submission](#for-invalid-submission)
+    - [When handling the query to display all the itin, consider the ERD](#when-handling-the-query-to-display-all-the-itin-consider-the-erd)
+
 
 ## 1. Project setup
 ### Suggestions: Do not start until you got the 1:n working
@@ -33,7 +43,7 @@
 ``` .Sum(item => item.price) ```
   - To get the sum of all the item price
 
-3. HINT on Create Itin / Comments on a details page
+## 3. HINT on Create Itin / Comments on a details page
 ### For successful submission
 - If you need to Redirect back to the Details page, it may require the Path variable and you will need to put it in argument as well. 
 
