@@ -96,6 +96,17 @@
 2. VS Code --> View --> Command Palette --> Snippet: Configure User Snippets --> FileExtension.json
 3. Update the title & prefix to use the snippet
 
+## Console out Model Error message
+```cs
+  if (!ModelState.IsValid)
+  {
+      var message = string.Join(" | ", ModelState.Values
+      .SelectMany(v => v.Errors)
+      .Select(e => e.ErrorMessage));
+      Console.WriteLine(message);
+    }
+```
+
 
 ## Dotnet Command cheatsheet
 - To cd into the folder
