@@ -86,7 +86,7 @@
         <td>5 </td>
         <td>Belt Prep</td>
         <td>Exam rubric, Project with logreg, 1:n, m:n</td>
-        <td> </td>
+        <td><a href="./05-belt-review/exam.md">Exam details </a> </td>
     </tr>
     </tbody>
 </table>
