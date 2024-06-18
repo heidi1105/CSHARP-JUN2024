@@ -96,7 +96,9 @@
 2. VS Code --> View --> Command Palette --> Snippet: Configure User Snippets --> FileExtension.json
 3. Update the title & prefix to use the snippet
 
-## Console out Model Error message
+
+## Common Errors & HINT
+### Console out Model Error message
 ```cs
   if (!ModelState.IsValid)
   {
@@ -107,6 +109,46 @@
     }
 ```
 
+### Confusion in View 
+- Use case:  Displaying a cshtml AND when the form is invalid
+- If you are a bit confused with all the View method, try to be more explicit whenever you use View
+  ```cs
+    return View("TripDetailsPage", trip); 
+    // View("cshtmlName", model)
+  ```
+
+### Confusion in Redirect
+- Use case: After processing a form (after POST - CreateProcess/EditProcess/Delete/Logout)
+- If you are confused with RedirectToAction, there are a few ways
+  ```cs
+    return RedirectToAction("Dashboard", "Trip"); 
+    // 2 arguments: ActionName, ControllerName
+
+    // The other option: Redirect - less preferred but it works. 
+    return Redirect("/trips");
+  ```
+
+- To add Path variable to Redirect
+  ```cs
+    return RedirectToAction("TripDetailsPage","Trip",  new {tripId = tripId}); 
+    // 3 arguments: ActionName, Controller, Route info
+
+    // The other option: Redirect - less preferred but it works.
+    return Redirect("/trips/" + tripId); 
+    // Make sure you add the / , it's just a string adding the id
+  ```
+### Other tips
+- Test Often! Even if something works before, it's always a good idea to test it once more after you finish another feature!
+- Forgetting .Include and having only ONE registered user to test. 
+  - Make sure you have .Include whenever you need the information of the related table. 
+  - Add more than one user to make sure all information is there.
+- Code suggestion / omnisharp is not working
+  - Make sure you open the VS Code with the project itself (Not nested project)
+- Somehow your code is not reading the model
+  -  make sure the namespace is correct! (it is case sensitive!)
+- When working on models, make sure you add ``` {get; set;}``` for all the properties
+- Navigation property should be nullable (with ?) 
+  ``` public User? Owner {get; set;} ```
 
 ## Dotnet Command cheatsheet
 - To cd into the folder
