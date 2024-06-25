@@ -1,0 +1,16 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+@model Pokemon
+
+<div>
+    <h1 class="display-4">@Model.Name</h1>
+    <img src="@Model.Image.front" />
+    <p>Movesets</p>
+    <ul>
+    @foreach(Moveset moveset in Model.Moves)
+    {
+        <li>@moveset.Move.Name</li>
+    }
+    </ul>
+</div>

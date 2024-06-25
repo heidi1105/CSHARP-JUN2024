@@ -1,0 +1,21 @@
+﻿@using System.Globalization
+@{
+    ViewData["Title"] = "Home Page";
+    static string ConvertToPascalCase(string input)
+    {
+        TextInfo textInfo = CultureInfo.CurrentCulture.TextInfo;
+        return textInfo.ToTitleCase(input);
+    }
+}
+@model PokemonListResult
+<div>
+    <h1>Pokemon list</h1>
+    <p>Number of pokemons: @Model.Count</p>
+
+    <ul>
+        @foreach(Pokemon poke in Model.Pokemons)
+        {
+            <li>@poke.Name</li>
+        }
+    </ul>
+</div>
