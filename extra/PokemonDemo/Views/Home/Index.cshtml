@@ -15,7 +15,7 @@
     <ul>
         @foreach(Pokemon poke in Model.Pokemons)
         {
-            <li>@poke.Name</li>
+            <li><a asp-action="PokeDetails" asp-route-name="@poke.Name">@poke.Name</a></li>
         }
     </ul>
 </div>

@@ -7,6 +7,3 @@ public record class PokemonListResult(
     [property: JsonPropertyName("results")] Pokemon[] Pokemons
 );
 
-// public record class PokeName(
-//     [property: JsonPropertyName("name")] string Name
-// );
